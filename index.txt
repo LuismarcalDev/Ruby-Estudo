@@ -139,6 +139,59 @@ loop do
     break if i == 5 // condição pra sair do loop
 end
 
+//Hashes
+// sao como arrays com chaves(id) no caso sao como objetos
+// as chaves é cada campo dos Hashes
+pessoas = {
+    nome:"luis",
+    idade: 20,
+    altura: 1.80
+}
+
+//imprimir o valor do objeto
+puts pessoas[:nome]
+puts pessoas[:idade]
+
+// adicionar uma chave ao hashe
+pessoas[:cidade] = "sao paulo"
+
+// adicoionar um valor a uma chave existente
+pessoas[:idade] = 25
+
+puts pessoas
+
+//deletar uma chave
+pessoa.delete(:idade)
+
+carro ={
+    nome: "Porsche 911",
+    marca: "porsche",
+    modelo: 2016,
+    cor: "vermelha"
+}
+
+puts "o carro que estamos falndo é o #{carro[:nome]}, da marca #{carro[:marca]}, da cor #{carro[:cor]}"
+
+//blocos em rb
+// do e end e {...}
+// ele percorre cada valor da array e faz uma função para cada valor
+
+numeros = [1,2,3,4,5,6,7]
+
+numeros.each do |n|
+    puts n*2
+end
+
+numeros.each { |n| puts n* 3 }
+
+
+
+
+
+
+
+
+
 exercicio 1:
 //importantes 
 //pegar valor do usuario é com gets.chomp
