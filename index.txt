@@ -188,10 +188,6 @@ numeros.each { |n| puts n* 3 }
 
 
 
-
-
-
-
 exercicio 1:
 //importantes 
 //pegar valor do usuario é com gets.chomp
@@ -264,6 +260,39 @@ puts "\n Histórico de resultados:"
 historico.each do |r|
   puts r
 end
+
+exercicio 3:
+// fazer um programa de criação de funcionarios
+// criar uma array de objetos em que cada vez eu possa cadastrar funcionarios
+
+//função 1
+ola boa tarde, qual é o seu nome?
+luis
+luis vamos cadastrar funcionarios
+qual é o nome dele?
+ok, qual é a idade dele?
+agora qual função ele exerce?
+de qual setor ele é
+
+//função 2
+voce deseja cadastrar este funcionario (S/N)? 
+S
+//função 3
+ok, funcionario cadastrado, voce deseja continuar a cadastrar mais funcionarios(S/N)?
+N
+//função4
+ok, gosataria de ver os funcionarios cadastradaos(S/N)?
+s
+//função 5
+Aqui está tods os funcionarios cadastrados Luis.
+
+nome: julio freitas
+idade: 25
+função: operador de maquina
+setor: descarregamento
+
+
+
 
 
 
