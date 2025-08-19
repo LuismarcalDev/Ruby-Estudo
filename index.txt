@@ -1,0 +1,217 @@
+
+//printf em rb
+puts "ola"
+
+//arrays em rb
+idades = [10,20,30,40,50]
+puts idades[1]
+
+// variaveis em rb
+nome = "luis"
+idade = 20
+altura = 1.80
+
+puts " meu nome é #{nome}, tenho #{idade} anos e #{altura}m de altura."
+
+
+//funçoes matematicas em rb
+a = 10
+b = 3
+
+puts a+b
+puts a-b 
+puts a*b 
+puts a/b
+puts a%b
+puts a ** b
+
+
+//if e else em rb
+// é diferente ele possui um end para terminar a função
+idade = 12
+
+if idade >= 18
+    puts "pode dirigir"
+else 
+    puts "menor de idade"
+end
+
+// while em rb
+i = 1
+while i< 6
+    puts "numero #{i}"
+    i+=1
+end
+
+//for em rb
+// diferente o i recebe cada valor dentro de 0..4 .. é uma range
+for i in 0..4
+    puts "for: #{i}"
+end
+
+//operadores de comparação
+// o ! = != é se ele for diferente faça tal ação 
+
+x = 5
+y = 10
+
+puts x == y
+puts x != y
+puts x > y
+puts x < y
+puts x >= 5
+puts y <= 10
+
+//else if, condicionais
+// oif else em rb é elsif
+
+nota = 9
+
+if nota >= 9
+    puts "execelente!"
+elsif nota >= 7
+    puts "bom!"
+else 
+    puts "precisando melhorar"
+end
+
+//metodo em rb
+// igual o js
+
+def saudacao(nome)
+    puts "ola, #{nome}! bem vindo ao ruby"
+end
+
+saudacao("luis")
+
+//arrays em rb
+
+// declaração de numeros e textos
+numeros = [10,20,30,40,50]
+nome = ["luis","joao","luisa"]
+
+//imprimir e localizar por indice
+puts numeros[1]
+puts nome[0]
+
+//adicionar valores em arrays
+numeros = [10,20]
+nome = ["luis","joao"]
+
+numeros << 60
+nomes.push("luis")
+
+
+// ver tamnho das arrays de texto e numeros
+puts numeros.length 
+puts nomes.size
+
+//remover o ultimo valor de uma arrays
+numeros = [1,2,3,4,5]
+numeros.pop
+
+//inspecionar e imprimir uma array toda
+puts numeros.inspect
+
+
+
+//deletar um valor especifico de uma array
+numeros = [10,20,30,40]
+
+numeros.delete_at(2) // aqui voce deleta
+
+puts numeros.inspect
+
+//loops em rb
+
+loop do 
+    puts "estou em um loop"
+    break // para o loop
+end
+
+
+//loop com limite
+i = 0
+
+loop do 
+    puts "contador de: #{i}"
+    i += 1
+    break if i == 5 // condição pra sair do loop
+end
+
+exercicio 1:
+//importantes 
+//pegar valor do usuario é com gets.chomp
+//pegar valor inteiro do usuario é gets.chomp.to_i de inteiro
+
+puts "olá me forneça seu nome por favor: "
+nome = gets.chomp
+
+puts "ok, #{nome}, me forneça um numero por favor: "
+n1 = gets.chomp.to_i
+
+puts "ok, me forneça mais um numero #{nome}: "
+n2 = gets.chomp.to_i
+
+resultado = n1+n2
+
+puts "#{nome}, o resultado da sua soma é, #{resultado}"
+
+
+//exercicio 2
+def saudacao(nome)
+  puts "ola, #{nome}. bem vindo a calculadora ruby"
+end
+
+def soma(a, b)
+  a + b
+end
+
+def multiplicacao(a, b)
+  a * b
+end
+
+puts "qual é o seu nome? "
+nome = gets.chomp
+
+saudacao(nome)
+
+historico = []
+
+loop do
+  puts "\n Digite o primeiro numero"
+  n1 = gets.chomp.to_i
+
+  puts "\n Digite o segundo numero"
+  n2 = gets.chomp.to_i
+
+  puts "Digite s para somar, m para multiplicar ou q para sair"
+  op = gets.chomp
+
+  if op == "s"
+    resultado = soma(n1, n2)
+    puts "Resultado = #{resultado}"
+    historico << resultado   
+
+  elsif op == "m"
+    resultado = multiplicacao(n1, n2)
+    puts "Resultado = #{resultado}"
+    historico << resultado   
+
+  elsif op == "q"
+    puts "saindo do programa"
+    break
+
+  else
+    puts "opção inválida"
+  end
+end
+
+puts "\n Histórico de resultados:"
+historico.each do |r|
+  puts r
+end
+
+
+
+
