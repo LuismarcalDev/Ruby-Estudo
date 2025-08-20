@@ -187,6 +187,92 @@ numeros.each { |n| puts n* 3 }
 //classes em ruby
 
 
+class Pessoa
+  def initialize(nome, idade) // ele cria uma especie de bloco de codigo que eu posso usar varias vezes, ele cria uma forma e eu posso usar varias vezes com dados diferentes, diferente do objeto
+    @nome = nome
+    @idade = idade
+  end
+
+  def apresentar
+    puts "Olá, meu nome é #{@nome} e tenho #{@idade} anos."
+  end
+end
+
+// aqui é onde eu utilizo a classe, eu posso usar ela varias vezes
+# Criando um objeto (instância da classe)
+p1 = Pessoa.new("Luis", 20)
+p1.apresentar
+
+
+//exemplo, ler com atenção
+class Produto
+    def initialize(nome,descricao,valor)
+        @nome = nome
+        @descricao = descricao
+        @valor = valor
+    end
+
+    def imprimir
+        puts "Nome do produto: #{@nome}\n Descrição: #{@descricao}\n Valor: R$#{@valor}" 
+    end
+end
+
+p1 = Produto.new("Galxy m53","smartphone 8gb Ram", 1200)
+p2 = Produto.new("Iphone 15"," 12gb Ram", 5200)
+p3 = Produto.new("Nexus pro 2","smartphone", 2800)
+p1.imprimir
+p2.imprimir
+p3.imprimir
+
+
+class Produto
+    def initialize(nome,descricao,valor)
+        @nome = nome
+        @descricao = descricao
+        @valor = valor
+    end
+
+    def imprimir
+        puts "Nome do produto: #{@nome}\n Descrição: #{@descricao}\n Valor: R$#{@valor}" 
+    end
+end
+
+p1 = Produto.new("Galxy m53","smartphone 8gb Ram", 1200)
+p2 = Produto.new("Iphone 15"," 12gb Ram", 5200)
+p3 = Produto.new("Nexus pro 2","smartphone", 2800)
+p1.imprimir
+p2.imprimir
+p3.imprimir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
