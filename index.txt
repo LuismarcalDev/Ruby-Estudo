@@ -1,8 +1,7 @@
-
-//printf em rb
+// printf em rb
 puts "ola"
 
-//arrays em rb
+// arrays em rb
 idades = [10,20,30,40,50]
 puts idades[1]
 
@@ -10,14 +9,11 @@ puts idades[1]
 nome = "luis"
 idade = 20
 altura = 1.80
-
 puts " meu nome é #{nome}, tenho #{idade} anos e #{altura}m de altura."
 
-
-//funçoes matematicas em rb
+// funçoes matematicas em rb
 a = 10
 b = 3
-
 puts a+b
 puts a-b 
 puts a*b 
@@ -25,11 +21,8 @@ puts a/b
 puts a%b
 puts a ** b
 
-
-//if e else em rb
-// é diferente ele possui um end para terminar a função
+// if e else em rb
 idade = 12
-
 if idade >= 18
     puts "pode dirigir"
 else 
@@ -43,18 +36,14 @@ while i< 6
     i+=1
 end
 
-//for em rb
-// diferente o i recebe cada valor dentro de 0..4 .. é uma range
+// for em rb
 for i in 0..4
     puts "for: #{i}"
 end
 
-//operadores de comparação
-// o ! = != é se ele for diferente faça tal ação 
-
+// operadores de comparação
 x = 5
 y = 10
-
 puts x == y
 puts x != y
 puts x > y
@@ -62,11 +51,8 @@ puts x < y
 puts x >= 5
 puts y <= 10
 
-//else if, condicionais
-// oif else em rb é elsif
-
+// else if, condicionais
 nota = 9
-
 if nota >= 9
     puts "execelente!"
 elsif nota >= 7
@@ -75,93 +61,66 @@ else
     puts "precisando melhorar"
 end
 
-//metodo em rb
-// igual o js
-
+// metodo em rb
 def saudacao(nome)
     puts "ola, #{nome}! bem vindo ao ruby"
 end
-
 saudacao("luis")
 
-//arrays em rb
-
-// declaração de numeros e textos
+// arrays em rb
 numeros = [10,20,30,40,50]
 nome = ["luis","joao","luisa"]
-
-//imprimir e localizar por indice
 puts numeros[1]
 puts nome[0]
 
-//adicionar valores em arrays
+// adicionar valores em arrays
 numeros = [10,20]
 nome = ["luis","joao"]
-
 numeros << 60
 nomes.push("luis")
 
-
-// ver tamnho das arrays de texto e numeros
+// ver tamanho das arrays
 puts numeros.length 
 puts nomes.size
 
-//remover o ultimo valor de uma arrays
+// remover o ultimo valor de uma array
 numeros = [1,2,3,4,5]
 numeros.pop
 
-//inspecionar e imprimir uma array toda
+// inspecionar e imprimir uma array toda
 puts numeros.inspect
 
-
-
-//deletar um valor especifico de uma array
+// deletar um valor especifico de uma array
 numeros = [10,20,30,40]
-
-numeros.delete_at(2) // aqui voce deleta
-
+numeros.delete_at(2)
 puts numeros.inspect
 
-//loops em rb
-
+// loops em rb
 loop do 
     puts "estou em um loop"
-    break // para o loop
+    break
 end
 
-
-//loop com limite
+// loop com limite
 i = 0
-
 loop do 
     puts "contador de: #{i}"
     i += 1
-    break if i == 5 // condição pra sair do loop
+    break if i == 5
 end
 
-//Hashes
-// sao como arrays com chaves(id) no caso sao como objetos
-// as chaves é cada campo dos Hashes
+// Hashes
 pessoas = {
     nome:"luis",
     idade: 20,
     altura: 1.80
 }
-
-//imprimir o valor do objeto
 puts pessoas[:nome]
 puts pessoas[:idade]
-
-// adicionar uma chave ao hashe
 pessoas[:cidade] = "sao paulo"
-
-// adicoionar um valor a uma chave existente
 pessoas[:idade] = 25
-
 puts pessoas
-
-//deletar uma chave
-pessoa.delete(:idade)
+pessoas.delete(:idade)
 
 carro ={
     nome: "Porsche 911",
@@ -169,44 +128,32 @@ carro ={
     modelo: 2016,
     cor: "vermelha"
 }
-
 puts "o carro que estamos falndo é o #{carro[:nome]}, da marca #{carro[:marca]}, da cor #{carro[:cor]}"
 
-//blocos em rb
-// do e end e {...}
-// ele percorre cada valor da array e faz uma função para cada valor
-
+// blocos em rb
 numeros = [1,2,3,4,5,6,7]
-
 numeros.each do |n|
     puts n*2
 end
-
 numeros.each { |n| puts n* 3 }
 
-//classes em ruby
-
-
+// classes em ruby
 class Pessoa
-  def initialize(nome, idade) // ele cria uma especie de bloco de codigo que eu posso usar varias vezes, ele cria uma forma e eu posso usar varias vezes com dados diferentes, diferente do objeto
-    @nome = nome
-    @idade = idade
-  end
+    def initialize(nome, idade)
+        @nome = nome
+        @idade = idade
+    end
 
-  def apresentar
-    puts "Olá, meu nome é #{@nome} e tenho #{@idade} anos."
-  end
+    def apresentar
+        puts "Olá, meu nome é #{@nome} e tenho #{@idade} anos."
+    end
 end
 
-// aqui é onde eu utilizo a classe, eu posso usar ela varias vezes
-# Criando um objeto (instância da classe)
 p1 = Pessoa.new("Luis", 20)
 p1.apresentar
 
-
-//exemplo, ler com atenção
 class Produto
-    def initialize(nome,descricao,valor)
+    def initialize(nome, descricao, valor)
         @nome = nome
         @descricao = descricao
         @valor = valor
@@ -224,233 +171,131 @@ p1.imprimir
 p2.imprimir
 p3.imprimir
 
-
-class Produto
-    def initialize(nome,descricao,valor)
-        @nome = nome
-        @descricao = descricao
-        @valor = valor
-    end
-
-    def imprimir
-        puts "Nome do produto: #{@nome}\n Descrição: #{@descricao}\n Valor: R$#{@valor}" 
-    end
-end
-
-p1 = Produto.new("Galxy m53","smartphone 8gb Ram", 1200)
-p2 = Produto.new("Iphone 15"," 12gb Ram", 5200)
-p3 = Produto.new("Nexus pro 2","smartphone", 2800)
-p1.imprimir
-p2.imprimir
-p3.imprimir
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-exercicio 1:
-//importantes 
-//pegar valor do usuario é com gets.chomp
-//pegar valor inteiro do usuario é gets.chomp.to_i de inteiro
-
+// exercicio 1
 puts "olá me forneça seu nome por favor: "
 nome = gets.chomp
-
 puts "ok, #{nome}, me forneça um numero por favor: "
 n1 = gets.chomp.to_i
-
 puts "ok, me forneça mais um numero #{nome}: "
 n2 = gets.chomp.to_i
-
 resultado = n1+n2
-
 puts "#{nome}, o resultado da sua soma é, #{resultado}"
 
-
-//exercicio 2
+// exercicio 2
 def saudacao(nome)
-  puts "ola, #{nome}. bem vindo a calculadora ruby"
+    puts "ola, #{nome}. bem vindo a calculadora ruby"
 end
 
 def soma(a , b)
-  a + b
+    a + b
 end
 
 def multiplicacao(a, b)
-  a * b
+    a * b
 end
 
 puts "qual é o seu nome? "
 nome = gets.chomp
-
 saudacao(nome)
 
 historico = []
-
 loop do
-  puts "\n Digite o primeiro numero"
-  n1 = gets.chomp.to_i
+    puts "\n Digite o primeiro numero"
+    n1 = gets.chomp.to_i
+    puts "\n Digite o segundo numero"
+    n2 = gets.chomp.to_i
+    puts "Digite s para somar, m para multiplicar ou q para sair"
+    op = gets.chomp
 
-  puts "\n Digite o segundo numero"
-  n2 = gets.chomp.to_i
-
-  puts "Digite s para somar, m para multiplicar ou q para sair"
-  op = gets.chomp
-
-  if op == "s"
-    resultado = soma(n1, n2)
-    puts "Resultado = #{resultado}"
-    historico << resultado   
-
-  elsif op == "m"
-    resultado = multiplicacao(n1, n2)
-    puts "Resultado = #{resultado}"
-    historico << resultado   
-
-  elsif op == "q"
-    puts "saindo do programa"
-    break
-
-  else
-    puts "opção inválida"
-  end
+    if op == "s"
+        resultado = soma(n1, n2)
+        puts "Resultado = #{resultado}"
+        historico << resultado
+    elsif op == "m"
+        resultado = multiplicacao(n1, n2)
+        puts "Resultado = #{resultado}"
+        historico << resultado
+    elsif op == "q"
+        puts "saindo do programa"
+        break
+    else
+        puts "opção inválida"
+    end
 end
 
 puts "\n Histórico de resultados:"
 historico.each do |r|
-  puts r
+    puts r
 end
 
-exercicio 3:
-// fazer um programa de criação de funcionarios
-// criar uma array de objetos em que cada vez eu possa cadastrar funcionarios
-
-//função 1
-ola boa tarde, qual é o seu nome?
-luis
-luis vamos cadastrar funcionarios
-qual é o nome dele?
-ok, qual é a idade dele?
-agora qual função ele exerce?
-de qual setor ele é
-
-//função 2
-voce deseja cadastrar este funcionario (S/N)? 
-S
-//função 3
-ok, funcionario cadastrado, voce deseja continuar a cadastrar mais funcionarios(S/N)?
-N
-//função4
-ok, gosataria de ver os funcionarios cadastradaos(S/N)?
-s
-//função 5
-Aqui está tods os funcionarios cadastrados Luis.
-
-nome: julio freitas
-idade: 25
-função: operador de maquina
-setor: descarregamento
-
+// exercicio 3
 def NomeUsuario(nome)
-  puts "ola, #{nome}, seja bem vindo ao cadastramento de funcionarios"
+    puts "ola, #{nome}, seja bem vindo ao cadastramento de funcionarios"
 end
 
 Funcionarios = []
 
 def cadastrar(nome_func, idade_func, funcao_func, setor_func)
-  Funcionarios << {
-    NomeFuncionario: nome_func,
-    IdadeFuncionario: idade_func,
-    FuncaoFuncionario: funcao_func,
-    SetorFuncionario: setor_func
-  }
+    Funcionarios << {
+        NomeFuncionario: nome_func,
+        IdadeFuncionario: idade_func,
+        FuncaoFuncionario: funcao_func,
+        SetorFuncionario: setor_func
+    }
 end
 
 def Mostrar
-  Funcionarios.each do |f|
-    puts "Nome: #{f[:NomeFuncionario]}, idade: #{f[:IdadeFuncionario]}, função: #{f[:FuncaoFuncionario]}, setor: #{f[:SetorFuncionario]}"
-  end
+    Funcionarios.each do |f|
+        puts "Nome: #{f[:NomeFuncionario]}, idade: #{f[:IdadeFuncionario]}, função: #{f[:FuncaoFuncionario]}, setor: #{f[:SetorFuncionario]}"
+    end
 end
 
 def adicionarInfos
-  puts "ola boa tarde, qual é o seu nome? "
-  nome = gets.chomp
-  NomeUsuario(nome)
+    puts "ola boa tarde, qual é o seu nome? "
+    nome = gets.chomp
+    NomeUsuario(nome)
 
-  loop do
-    puts "vamos cadastrar um funcionario"
+    loop do
+        puts "vamos cadastrar um funcionario"
+        puts "qual é o nome do funcionario? "
+        nome_funcionario = gets.chomp
+        puts "qual a idade dele? "
+        idade_funcionario = gets.chomp.to_i
+        puts "Qual a função dele? "
+        funcao_funcionario = gets.chomp
+        puts "De qual setor ele se Encontra? "
+        setor_funcionario = gets.chomp
+        puts " voce deseja cadastrar este funcionario? (S/N) "
+        cadastro = gets.chomp.downcase
 
-    puts "qual é o nome do funcionario? "
-    nome_funcionario = gets.chomp
+        if cadastro == "s"
+            puts "cadastro efetuado"
+            cadastrar(nome_funcionario, idade_funcionario, funcao_funcionario, setor_funcionario)
+        elsif cadastro == "n"
+            puts "programa fechando"
+            break
+        else
+            puts "sla"
+        end
 
-    puts "qual a idade dele? "
-    idade_funcionario = gets.chomp.to_i
-
-    puts "Qual a função dele? "
-    funcao_funcionario = gets.chomp
-
-    puts "De qual setor ele se Encontra? "
-    setor_funcionario = gets.chomp
-
-    puts " voce deseja cadastrar este funcionario? (S/N) "
-    cadastro = gets.chomp.downcase
-    if cadastro == "s"
-      puts "cadastro efetuado"
-      cadastrar(nome_funcionario, idade_funcionario, funcao_funcionario, setor_funcionario)
-    elsif cadastro == "n"
-      puts "programa fechando"
-      break
-    else
-      puts "sla"
+        puts " voce deseja continuar a cadastar mais funcionarios? (S/N)"
+        continuar = gets.chomp.downcase
+        if continuar == "s"
+            puts "ok, vamos continuar"
+        elsif continuar == "n"
+            Mostrar
+            break
+        else
+            puts "sla"
+        end
     end
-
-    puts " voce deseja continuar a cadastar mais funcionarios? (S/N)"
-    continuar = gets.chomp.downcase
-
-    if continuar == "s"
-      puts "ok, vamos continuar"
-    elsif continuar == "n"
-      Mostrar
-      break
-    else
-      puts "sla"
-    end
-  end
 end
 
 adicionarInfos
 
-exercicio 4:
+// exercicio 4
 def saudacao(nome)
-  puts " ola #{nome}"
+    puts " ola #{nome}"
 end
 
 lista = []
@@ -458,13 +303,10 @@ lista = []
 puts 'ola qual é o seu nome? '
 nome = gets.chomp
 
-
-
 loop do 
     puts "adicione um item a sua lista de compras: "
     itens = gets.chomp
     lista.push(itens)
-
     puts "voce quer adicionar mais um item? (S/N) "
     continuar = gets.chomp
     
@@ -472,23 +314,9 @@ loop do
         puts "ok, vamos adicionar mais itens"
     else
         puts "ok, vou te mostrar sua lista"
-
         lista.each do |l|
             puts l
-          
         end
-          break
+        break
     end
-
-
 end
-    
-
-
-
-
-
-
-
-
-

@@ -12,11 +12,13 @@ class Produto
     end
 end
 
+produtos = []
 
-
+loop do 
 puts "qual o nome do produto?"
     nomeU = gets.chomp
-    
+    break if nomeU.downcase == "sair"
+
     puts "qual o nome da marca?"
     marcaU = gets.chomp
     
@@ -24,4 +26,10 @@ puts "qual o nome do produto?"
     valorU = gets.chomp
 
     p1 = Produto.new(nomeU,marcaU,valorU)
-    p1.imprimir
+    produtos << p1
+    end
+ 
+    puts "\nProdutos cadastrados:"
+    produtos.each do |produto|
+    produto.imprimir
+    end
