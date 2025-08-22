@@ -16,3 +16,13 @@ p3 = Produto.new("Nexus pro 2","smartphone", 2800)
 p1.imprimir
 p2.imprimir
 p3.imprimir
+
+
+class Produto
+    def initialize(nome, descricao,valor)
+        @nome
+        @descricao
+        @valor
+    end
+
+    
